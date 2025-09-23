@@ -10,7 +10,6 @@ workout_db = [] # Simple in-memory database
 # --- Data Models ---
 # This model is for data that comes IN to the API
 class WorkoutCreate(SQLModel):
-    id: int
     name: str
     sets: int
     reps: int
