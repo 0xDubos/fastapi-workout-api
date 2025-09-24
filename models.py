@@ -15,3 +15,12 @@ class Workout(SQLModel, table = True):
     sets: int
     reps: int
     weight: int 
+
+class User(SQLModel, table=True):
+    id: Optional[int] = Field(default = None, primary_key = True)
+    username: str = Field(index=True)
+    hashed_password: str
+
+class UserCreate(SQLModel):
+    username: str
+    password: str
